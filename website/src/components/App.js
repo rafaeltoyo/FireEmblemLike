@@ -1,28 +1,44 @@
 import React, { Component } from 'react';
-import logo from '../imgs/logo.svg';
 import './App.css';
 
-class App extends Component {
+import Alert from 'react-bootstrap/Alert';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavbarBrand from 'react-bootstrap/NavbarBrand';
+import NavbarCollapse from 'react-bootstrap/NavbarCollapse';
+import NavbarToggle from 'react-bootstrap/NavbarToggle';
+import NavItem from 'react-bootstrap/NavItem';
+import NavLink from 'react-bootstrap/NavLink';
+
+export default class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+      <div>
+        <header>
+          <Navbar bg="dark" variant="dark" expand="sm">
+
+            <NavbarBrand>Jogo teste</NavbarBrand>
+            <NavbarToggle />
+
+            <NavbarCollapse>
+              <Nav>
+                <NavItem>
+                  <NavLink active>Home</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink>How to play</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink>Register</NavLink>
+                </NavItem>
+              </Nav>
+            </NavbarCollapse>
+
+          </Navbar>
         </header>
+        <main></main>
+        <footer></footer>
       </div>
     );
-  }
+  };
 }
-
-export default App;
